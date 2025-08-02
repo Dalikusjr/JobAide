@@ -410,6 +410,7 @@
           </div>
         </div>
       </div>
+   
     </section>
     <!-- Contact -->
     <section id="contact" class="py-20 bg-white">
@@ -475,6 +476,8 @@
             </div>
         </div>
     </section>
+
+
     <!-- footer -->
     <footer class="bg-primary">
       <div class="container mx-auto p-6">
@@ -561,6 +564,12 @@
         </p>
       </div>
     </footer>
+    <a
+      href="#"
+      id="back-to-top"
+      class="fixed bottom-8 right-8   bg-secondary text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:shadow-neon transition transform hover:scale-110  z-50"
+      ><i class="fas fa-arrow-up text-xl"></i
+    ></a>
     <script>
       document.querySelectorAll(".faq-question").forEach((button) => {
         button.addEventListener("click", () => {
@@ -587,6 +596,11 @@
             icon.textContent = "+";
           }
         });
+      });
+      window.addEventListener("scroll", () => {
+        const b = document.getElementById("back-to-top");
+        if (window.pageYOffset > 300) b.classList.remove("hidden");
+        else b.classList.add("hidden");
       });
     </script>
   </body>
