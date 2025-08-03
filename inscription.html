@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JobAide | Inscription</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            keyframes: {
+              "fade-in": {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              "slide-in-bottom": {
+                "0%": { transform: "translateY(100%)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+            },
+            animation: {
+              "fade-in": "fade-in 1.5s ease-in-out forwards",
+              "slide-in-bottom": "slide-in-bottom 0.8s ease-out forwards",
+            },
+            colors: {
+              primary: "#0A2463",
+              secondary: "#e95501",
+              light: "#F8F9FA",
+            },
+          },
+        },
+        plugins: [],
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="bg-light">
+    <header class="mb-16">
+      <div class=""></div>
+      <div class="bg-primary py-12">
+        <div
+          class="bg-primary flex flex-col items-center md:flex-row md:justify-center space-x-12"
+        >
+          <a href="/index.html"
+            ><img
+              src="images/logo_inverse.png"
+              alt=""
+              class="w-64 sm:w-[350px] animate-fade-in"
+          /></a>
+          <h1
+            class="text-7xl text-center md:text-left md:ml-[250px] text-secondary my-12"
+          >
+            Inscription
+          </h1>
+        </div>
+
+        <p class="text-gray-400 text-center md:text-left text-2xl mx-24">
+          Complétez ce formulaire pour finaliser votre inscription sur JobAide
+        </p>
+        <p class="text-gray-400 text-center md:text-left text-2xl mx-24">
+          En remplissant ces informations, vous accéderez à nos services
+          d’accompagnement personnalisés pour trouver un emploi. Une fois le
+          formulaire envoyé, vous serez redirigé vers la page de paiement
+          sécurisé.
+        </p>
+      </div>
+    </header>
+    <section>
+      <div class="mb-32 mx-4">
+        <form
+          action=""
+          class="space-y-12 md:space-y-0 border shadow-lg bg-white container mx-auto grid md:grid-cols-2 py-8 pl-16 rounded-lg max-w-5xl md:h-[700px]"
+        >
+          <div class="pr-12 space-y-12">
+            <div>
+              <label class="block text-gray-700 mb-2" for="nom"
+                >Nom et Prénom : <span class="text-secondary">*</span>
+              </label>
+              <input
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 focus:shadow-md focus:shadow-orange-200 focus:border-transparent transition duration-300"
+                required
+                placeholder="Nom et Prénom"
+                type="text"
+                name="nom"
+                id=""
+              />
+            </div>
+            <div>
+              <label class="block text-gray-700 mb-2" for="mail"
+                >E-mail : <span class="text-secondary">*</span></label
+              >
+              <input
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 focus:shadow-md focus:shadow-orange-200 focus:border-transparent transition duration-300"
+                type="email"
+                placeholder="nom@domaine.xyz"
+                required
+                name="mail"
+                id=""
+              />
+            </div>
+            <div>
+              <label class="block text-gray-700 mb-2" for="tel"
+                >Téléphone : <span class="text-secondary">*</span></label
+              >
+              <input
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 focus:shadow-md focus:shadow-orange-200 focus:border-transparent transition duration-300"
+                placeholder="+216 xx xxx xxx"
+                required
+                type="text"
+                name="tel"
+                id=""
+              />
+            </div>
+          </div>
+          <div class="pr-12 space-y-12">
+            <div>
+              <label class="block text-gray-700 mb-2" for="poste"
+                >type de postes visés :
+                <span class="text-secondary">*</span></label
+              >
+              <input
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 focus:shadow-md focus:shadow-orange-200 focus:border-transparent transition duration-300"
+                placeholder="Développeur"
+                required
+                type="text"
+                name="poste"
+                id=""
+              />
+            </div>
+            <div>
+              <label class="block text-gray-700 mb-2" for="local"
+                >Localisation :</label
+              >
+              <input
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 focus:shadow-md focus:shadow-orange-200 focus:border-transparent transition duration-300"
+                placeholder="Monastir"
+                type="text"
+                name="local"
+                id=""
+              />
+            </div>
+            <div>
+              <label class="block text-gray-700 mb-2" for="cv"
+                >Curriculum Vitae : <span class="text-secondary">*</span></label
+              >
+              <input
+                class="w-full md:file:mr-14 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 focus:shadow-md focus:shadow-orange-200 focus:border-transparent transition duration-300 file:bg-secondary file:border-transparent file:text-gray-100 hover:file:bg-orange-500 file:transition file:duration-300 cursor-pointer file:cursor-pointer file:px-4 file:py-2 file:mr-4"
+                type="file"
+                name="cv"
+                id=""
+                required
+                accept=".jpg, .docx, .doc, .pdf"
+              />
+            </div>
+          </div>
+          <div class="pr-12 md:col-span-2">
+            <label class="block text-gray-700 mb-2" for="cv"
+              >Description (Optionel) :</label
+            >
+            <textarea
+              class="w-full h-32 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 focus:shadow-md focus:shadow-orange-200 focus:border-transparent transition duration-300"
+              placeholder="Ecrire votre message ici ..."
+              name=""
+              id=""
+            ></textarea>
+          </div>
+          <div
+            class="flex flex-col space-y-8 md:space-y-0 md:col-span-2 md:flex-row md:mx-24 pr-12 md:space-x-12 md:max-h-14 md:items-center"
+          >
+            <input
+              class="text-gray-100 bg-secondary rounded-lg w-full py-3 font-medium hover:bg-orange-500 transition duration-300 cursor-pointer"
+              type="submit"
+              value="Procéder au paiment"
+            />
+            <a
+              class="text-gray-100 bg-secondary rounded-lg w-full py-3 font-medium hover:bg-orange-500 transition duration-300 cursor-pointer text-center"
+              href="index.html"
+              >Annuler</a
+            >
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="bg-primary">
+      <div class="container mx-auto p-6">
+        <div class="flex items-center justify-center gap-3">
+          <div
+            class="bg-white w-16 h-16 rounded-full flex items-center justify-center text-3xl font-medium"
+          >
+            JA
+          </div>
+          <p class="text-white text-4xl font-semibold">JobAide</p>
+        </div>
+        <p class="text-gray-400 my-3 text-2xl text-center">
+          Votre partenaire pour une recherche d'emploi en Tunise efficace et
+          sans stress.
+        </p>
+        <hr class="max-w-5xl mx-auto my-4 border-gray-600" />
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-8 my-4"
+        >
+          <div class="text-center md:text-left">
+            <h2 class="text-white text-xl font-bold mb-3">Navigation</h2>
+            <div class="flex flex-col md:flex-col gap-1 text-white">
+              <a
+                class="hover:text-gray-400 transition duration-300"
+                href="index.html#comment"
+                >Comment ça marche ?</a
+              >
+              <a
+                class="hover:text-gray-400 transition duration-300"
+                href="index.html#pricing"
+                >Nos Forfaits</a
+              >
+              <a
+                class="hover:text-gray-400 transition duration-300"
+                href="index.html#avis"
+                >Témoignages</a
+              >
+              <a
+                class="hover:text-gray-400 transition duration-300"
+                href="index.html#faq"
+                >FAQ</a
+              >
+              <a
+                class="hover:text-gray-400 transition duration-300"
+                href="index.html#contact"
+                >Nous Contacter</a
+              >
+            </div>
+          </div>
+          <div class="text-center md:text-left">
+            <h2 class="text-white text-xl font-bold mb-3">Légal</h2>
+            <div class="flex flex-col md:flex-col gap-1 text-white">
+              <a class="hover:text-gray-400 transition duration-300" href=""
+                >Mentions légales</a
+              >
+              <a class="hover:text-gray-400 transition duration-300" href=""
+                >Politique de confidentialité</a
+              >
+            </div>
+          </div>
+          <div class="space-y-4">
+            <h2 class="text-white text-xl font-bold">Suivez-Nous</h2>
+            <div class="space-x-6">
+              <a
+                class="text-white text-2xl hover:text-gray-400 transition duration-300"
+                href=""
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                class="text-white text-2xl hover:text-gray-400 transition duration-300"
+                href=""
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                class="text-white text-2xl hover:text-gray-400 transition duration-300"
+                href=""
+                ><i class="fab fa-facebook"></i
+              ></a>
+            </div>
+          </div>
+          <div>
+            <h2 class="text-white text-xl font-bold">Paiements</h2>
+            <div class="space-x-3">
+              <i class="fab fa-cc-mastercard text-white text-2xl"></i>
+              <i class="fab fa-cc-visa text-white text-2xl"></i>
+              <i class="fab fa-cc-stripe text-white text-2xl"></i>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <p class="text-gray-300 text-center mt-2">
+          &copy; 2025 JobAide. Tous droits réservés.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
