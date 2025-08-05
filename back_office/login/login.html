@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JobAide | Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+    />
+    <style>
+      #eye:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body class="bg-light vh-100 d-flex">
+    <div class="card w-75 w-md-75 m-auto" style="max-width: 500px">
+      <img class="card-img-top" src="../../images/logo.png" alt="Title" />
+      <div class="card-body">
+        <h2 class="card-title text-center">Login</h2>
+        <p class="card-text text-center">
+          Merci d'entrer vos informations de connexion
+        </p>
+        <form action="">
+          <div class="mb-3 text-start">
+            <label for="l_user" class="form-label">Nom d'utilisateur :</label>
+            <input
+              type="text"
+              class="form-control"
+              name="l_user"
+              id="l_user"
+              aria-describedby="helpId"
+              placeholder="Login"
+            />
+          </div>
+          <label for="" class="form-label">Mot de passe :</label>
+          <div class="mb-3 input-group">
+            <input
+              type="password"
+              name="l_pass"
+              id="l_pass"
+              class="form-control"
+              placeholder="*******"
+              aria-describedby="helpId"
+            />
+            <small id="eye" class="input-group-text"
+              ><i class="fa-solid fa-eye text-primary"></i
+            ></small>
+          </div>
+          <button type="submit" class="btn btn-primary d-flex mx-auto">
+            Se connecter
+          </button>
+        </form>
+      </div>
+    </div>
+    <script>
+      document
+        .querySelector("form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const nom = document.getElementById("l_user");
+          if (nom.value.length === 0) {
+            nom.value = "Champ obligatoire";
+            nom.classList.add("text-danger");
+          }
+          const pass = document.getElementById("l_pass");
+          if (pass.value.length === 0) {
+            pass.type = "text";
+            pass.value = "Champ obligatoire";
+            pass.classList.add("text-danger");
+          }
+        });
+      document
+        .getElementById("l_user")
+        .addEventListener("focus", function (event) {
+          if (this.value == "Champ obligatoire") this.value = "";
+          this.classList.remove("text-danger");
+        });
+      document
+        .getElementById("l_pass")
+        .addEventListener("focus", function (event) {
+          if (this.value == "Champ obligatoire") this.value = "";
+          this.classList.remove("text-danger");
+        });
+      document.getElementById("eye").addEventListener("click", function () {
+        const show = document.querySelector("i");
+        const passWord = document.getElementById("l_pass");
+        if (show.classList.contains("fa-eye")) {
+          show.classList.remove("fa-eye");
+          show.classList.add("fa-eye-slash");
+          passWord.type = "text";
+        } else {
+          show.classList.remove("fa-eye-slash");
+          show.classList.add("fa-eye");
+          passWord.type = "password";
+        }
+      });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
