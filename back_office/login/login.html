@@ -117,7 +117,9 @@
             show.classList.add("eye-active");}
         else{
             show.classList.remove("eye-active");
-            show.classList.add("eye-not-active");}
+            show.classList.add("eye-not-active");
+            document.querySelector("i").classList.remove("fa-eye-slash");
+            document.querySelector("i").classList.add("fa-eye");}
       });
     </script>
     <script
