@@ -15,9 +15,17 @@
       href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
     />
     <style>
-      #eye:hover {
-        cursor: pointer;
-      }
+        .eye-active:hover{
+            cursor: pointer;
+        }
+        .eye-active{
+            color: #0d6efd;
+        }
+        .eye-not-active{
+            color: #6c757d;
+            pointer-events:none;
+            cursor: not-allowed;
+        }
     </style>
   </head>
   <body class="bg-light vh-100 d-flex">
@@ -50,8 +58,8 @@
               placeholder="*******"
               aria-describedby="helpId"
             />
-            <small id="eye" class="input-group-text"
-              ><i class="fa-solid fa-eye text-primary"></i
+            <small id="eye" class="input-group-text eye-not-active"
+              ><i class="fa-solid fa-eye "></i
             ></small>
           </div>
           <button type="submit" class="btn btn-primary d-flex mx-auto">
@@ -101,6 +109,15 @@
           show.classList.add("fa-eye");
           passWord.type = "password";
         }
+      });
+      document.getElementById("l_pass").addEventListener("input",function(){
+        const show = document.getElementById("eye");
+        if(this.value.length > 0)
+            {show.classList.remove("eye-not-active");
+            show.classList.add("eye-active");}
+        else{
+            show.classList.remove("eye-active");
+            show.classList.add("eye-not-active");}
       });
     </script>
     <script
