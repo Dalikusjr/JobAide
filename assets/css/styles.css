@@ -1,0 +1,297 @@
+/* ==================== */
+/* ANIMATIONS           */
+/* ==================== */
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slide-in-bottom {
+  0% { transform: translateY(100%); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fade-in 1.5s ease-in-out forwards;
+}
+
+.animate-slide-in-bottom {
+  animation: slide-in-bottom 0.8s ease-out forwards;
+}
+
+/* ==================== */
+/* COMPOSANTS COMMUNS   */
+/* ==================== */
+.pointer {
+  cursor: pointer;
+}
+
+.eye-active {
+  color: #0d6efd;
+  cursor: pointer;
+}
+
+.eye-active:hover {
+  cursor: pointer;
+}
+
+.eye-not-active {
+  color: #6c757d;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.faq-answer {
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+}
+
+/* ==================== */
+/* SIDEBAR              */
+/* ==================== */
+#sidebarMenu {
+  background-color: #0a2463;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.05) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  color: #d1d9ff;
+  padding-top: 1rem;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Icônes FontAwesome pour la sidebar */
+#sidebarMenu a[href*="accueil"]::before {
+  content: "\f015"; /* maison */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 8px;
+}
+
+#sidebarMenu a[href*="clients"]::before {
+  content: "\e533"; /* people */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 8px;
+}
+
+#sidebarMenu a[href*="inscriptions"]::before {
+  content: "\f234"; /* user-plus */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 8px;
+}
+
+#sidebarMenu a[href*="contacts"]::before {
+  content: "\f0e0"; /* envelop */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 8px;
+}
+
+#sidebarMenu a[href*="users"]::before {
+  content: "\f007"; /* user */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 8px;
+}
+
+#sidebarMenu a[href*="setting"]::before {
+  content: "\f013"; /* engrenage */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 8px;
+}
+
+#sidebarMenu a[href*="logout"]::before {
+  content: "\f52b"; /* open door */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 8px;
+}
+
+/* Navigation */
+.nav-link {
+  background-color: rgba(28, 28, 28, 0.5);
+  color: #d1d9ff;
+  transition: background-color 0.5s ease;
+}
+
+.nav-link:hover {
+  background-color: rgba(248, 245, 245, 0.6);
+  color: black;
+}
+
+nav .btn-dark:hover {
+  color: black;
+  background-color: white;
+  border-color: #f57c31;
+  transition: background-color 0.3s ease;
+}
+
+/* Responsive sidebar */
+@media (min-width: 768px) {
+  .offcanvas-sm {
+    position: static !important;
+    transform: none !important;
+    visibility: visible !important;
+    background-color: #0a2463;
+    border-right: 1px solid #ddd;
+    width: 250px;
+    height: 100vh;
+    padding-top: 1rem;
+  }
+}
+
+/* ==================== */
+/* CARTES STATISTIQUES  */
+/* ==================== */
+.stat-card {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 10px;
+  margin-top: 20px;
+  background: linear-gradient(135deg, #343a40 0%, #212529 100%);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.stat-item {
+  transition: all 0.3s ease;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+.stat-item:hover {
+  background: rgba(255, 255, 255, 0.03) !important;
+}
+
+.stat-badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover .stat-badge {
+  transform: translateX(-50%) scale(1.1);
+}
+
+/* ==================== */
+/* SECTION BIENVENUE    */
+/* ==================== */
+.welcome-container {
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #343a40 0%, #212529 100%);
+}
+
+.welcome-container:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  border-color: #495057 !important;
+  transform: translateY(-2px);
+}
+
+.username {
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(23, 162, 184, 0.5);
+}
+
+/* ==================== */
+/* MESSAGES             */
+/* ==================== */
+.message-preview {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.message-preview:hover {
+  transform: translateX(5px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* ==================== */
+/* COULEURS             */
+/* ==================== */
+.bg-danger {
+  background-color: rgba(220, 53, 69, 0.5) !important;
+  transition: background-color 0.3s ease;
+}
+
+.bg-danger:hover {
+  background-color: rgba(176, 42, 12, 0.6) !important;
+  text-decoration: none;
+}
+
+/* ==================== */
+/* RESPONSIVE           */
+/* ==================== */
+@media (max-width: 768px) {
+  .welcome-container {
+    text-align: center;
+  }
+
+  .datetime-display {
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .stat-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .stat-item:last-child {
+    border-bottom: none;
+  }
+}
+
+/* ==================== */
+/* POPUP           */
+/* ==================== */
+#popup {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1050;
+  display: none;
+}
+
+#popupSubmit {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1050;
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translate(-50%, -60%);}
+  to {opacity: 1; transform: translate(-50%, -50%);}
+}
+
+@keyframes fadeOut {
+  from {opacity: 1; transform: translate(-50%, -50%);}
+  to {opacity: 0; transform: translate(-50%, -60%);}
+}
